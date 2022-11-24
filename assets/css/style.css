@@ -1,0 +1,465 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;/*tự động tính toán khi thay đổi kích thước width và height */
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth; /*cuộn trang*/
+
+}
+/* 
+làm từ ngoài vào trong
+từ trên xuống dưới
+tổng quan đến chi tiết
+1. vị trí 
+2 kích thước (width, height)
+3 màu sắc
+4 kiểu dáng (kiểu chữ, vuông, tròn, tam giác )
+*/
+
+.clear{
+    clear: both;/*dùng để xóa lỗi float*/
+}
+#main {
+overflow: hidden;
+}
+
+#Header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;/*tỉ lệ trình duyệt*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /*độ sâu , giữ cho header nằm yên*/
+    
+}
+#nav{
+    display: inline-block;
+}
+#nav , .subnav{
+    list-style-type: none;/*bỏ dấu chấm*/
+}
+#nav > li {
+    display: inline-block;/*nằm ngang*/
+}
+#nav li { 
+    position: relative;
+}
+#nav  > li >a{
+    color: #fff; 
+    text-transform: uppercase;/*viết hoa*/
+}
+#nav li a{
+    text-decoration: none; /*gạch chân chữ*/
+    line-height: 46px;
+    padding: 0 24px;
+    display: block; /*chiếm toàn khối*/
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav> li:hover > a,
+#nav .subnav li:hover a
+{
+color: #000;
+background-color: #ccc;
+
+}
+#nav .subnav {
+      display: none;/*ẩn đi phần thả xuống */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+ }
+#nav .subnav a{
+    color: #000;
+   padding: 0 12px;
+    line-height:38px;   /*khoảng cách chữ chiều cao*/
+}
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+
+#Header .search-btn{
+    float: right;/*dồn sang phải*/
+    
+}
+
+#Header .search-btn:hover{
+    background-color: red;
+    cursor: pointer;/*thay đổi hình bàn tay*/
+    display: block;
+}
+
+#Header .search-icon  {
+    color: #fff;
+    font-size: 16px;
+    line-height: 46px;
+    padding: 0 16px;
+}
+#Header .mobile-menu-btn{
+    display: none;
+}
+#Slider {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+
+  background: url('/assets/img/slider/chicago.jpg') top center /cover no-repeat;
+  /* background-image: url('/assets/img/slider/chicago.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;lấy rõ nét nhất của ảnh, mất 1 số gốc */
+}
+#Slider .text-content{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+   bottom: 47px;
+  width: 100%;
+  display: inline-block;
+}
+#Slider .text-heading{
+    font-weight: 500;/*giam độ dày chữ*/
+    font-size: 24px;
+
+}
+#Slider .text-description{
+font-size: 18px;
+margin-top: 25px;
+}
+#Content {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#Content .content-section{
+padding:64px 16px;
+width: 800px;
+max-width: 100%;
+margin: 0 auto;
+}
+
+#Content .section-heading{
+    font-size: 30px;
+    margin: 10px 0;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;/*viết hoa*/
+}
+#Content .section-sub-heading{
+    font-size: 15px;
+    margin: 15px 0;
+    opacity: 0.60; /*làm mờ chữ*/
+    font-style: italic;/*in nghiên*/
+}
+#Content .about-text{
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify; /*canh chữ đều 2 bên */
+    line-height: 1.5; /*khoảng cách chữ 1.5*/
+  
+}
+
+.img_center{
+    padding: 32px 0;
+    
+}
+#Content .name{
+    float: left;
+   width: 33.33333%;
+/* width: calc(100% /3); */
+
+overflow: hidden;
+}
+
+.name p {
+    margin: 15px 0;
+}
+#Content img{
+   
+}
+#Content .name_img{
+width: 154px;
+ height: 154px;
+  
+    margin-bottom: 15px;
+    border-radius: 4px;
+   
+}
+/* tour */
+#Content .tourdates{
+    background-color: black;
+}
+#Content .content_tour{
+    color: white;
+    padding:64px 16px;
+width: 800px;
+max-width: 100%;
+    margin: 0 auto;
+}
+#Content .showtimes{
+    list-style-type: none;
+text-align: left;
+    color: gray;
+    background-color: white;
+}
+
+#Content .month{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+
+}
+#Content .sold{
+    background-color: #f44336;
+    color: white;
+    margin: 0 16px;
+    padding: 0 8px;
+}
+#Content .number{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 0 8px;
+    float: right;
+    margin-right: 16px;
+}
+#Content .Location_tour{
+    padding: 32px 0px;
+ margin:0 -8px;
+
+}
+#Content .location{
+    float: left;
+    text-align: left;
+
+    width: calc((100% / 3 ) );  
+padding: 0 8px;
+margin-bottom: 16px;
+}
+
+#Content .location_img  {
+    list-style-type: none;
+padding-top: 15px;
+
+}
+#Content .img_loca
+{
+    display: block;
+    width: 100%;
+}
+#Content .location_list{
+    padding: 0 16px;
+    background-color: #fff;
+
+}
+#Content .img_loca:hover{
+    opacity: 0.6;/*độ mờ */
+}
+#Content .loca{
+    color: #000;
+}
+#Content .time{
+    color:gray;
+    margin: 15px 0;
+}
+#Content .content_loca{
+    color: #000;
+    margin: 15px 0;
+}
+#Content .buy{
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    text-decoration: none;/*gạch chân*/
+}
+#Content .buy:hover{
+    background-color: gray;
+    color: black;
+}
+/* contact */
+.content_contact{
+    padding:64px 16px;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#Content .contact{
+    padding: 32px 0;
+    padding-bottom: 160px
+}
+#Content .contact_list{
+   font-size: 18px;
+text-align: left;
+line-height: 1.6;
+width: 50%;
+float: left;
+}
+.contact_list i[class*="ti-"]{
+    width: 30px;
+}
+.contact_box{
+    text-align: right;
+width: 50%;
+float: left;
+}
+.name-box{
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.box1{
+    float: left;
+    margin-bottom: 8px;
+    display: flex;
+}
+.box-name{
+    margin-right: 16px;
+}
+.contact_box .send{
+    border: none;
+    font-size: 15px;
+  background: black;
+  color: white;
+  padding: 10px 16px;
+  margin: 16px 0;
+}
+.send:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+#contact .contact_list a{
+    color: rgb(12, 12, 235);
+  opacity: 0.6;
+   }
+   #contact .contact_list a:hover{
+      opacity: 1;
+  }
+/* map */
+.map-section img{ 
+width: 100%;
+filter: grayscale(50%);
+}
+/* footer */
+#Footer {
+padding: 64px 16px;
+text-align: center;
+
+}
+.footer-icon a{
+    font-size: 22px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.6 );
+}
+.footer-icon a:hover{
+    color: rgba(0,0,0,0.4 );
+}
+.copyright{
+    font-size: 16px;
+    margin: 15px 0;
+    color: rgba(0,0,0,0.6 );
+}
+.copyright a{
+    color: rgba(0,0,0,0.6 );
+}
+.copyright a:hover{
+    
+    color: rgba(0,0,0,0.3 );
+}
+    /* madal */
+.modal{
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;/*nắm giữa*/
+    align-items: center;/*nằm giữa chiều cao*/
+    justify-content: center;/*giữa màn chiều ngang*/
+}
+.modal.open{
+    display: flex;
+}
+.modal_container{   
+    background-color: white;
+    width: 900px;
+    max-width:calc(100% - 48px);
+    min-height: 200px;
+    position: relative;/*thẻ cha*/
+}
+.modal_header{
+    height: 129px;
+    width: 900px;
+    background-color:#009688 ;
+    font-size: 30px;
+    color:white;
+    letter-spacing: 4px;
+    padding: 32px 16px;
+    align-items: center;
+    justify-content: center  ;
+    display: flex;
+}
+.modal_header .ti-bag{
+margin: 10px 0;
+
+}
+.modal_close{
+    position: absolute;/*thẻ con*/
+   right: 0;
+   top: 0;
+   color: #fff;
+   padding: 12px ;
+   cursor: pointer;
+   opacity: 0.7;
+}
+.modal_close:hover{
+    opacity: 1;
+}
+.modal_body{
+    padding: 16px;
+}
+.modal_label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+input.modal_input {
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+button.modal_box {
+    border: none;
+    background: #009688;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    padding: 18px;
+    cursor: pointer;
+}
+button.modal_box:hover{
+    color: #000;
+    background-color: gray;
+}
+footer.modal_end {
+    text-align: right;
+    padding: 24px 0;
+}
+footer.modal_end a {
+color: #2196F3;
+}

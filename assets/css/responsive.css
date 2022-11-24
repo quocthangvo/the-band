@@ -1,0 +1,125 @@
+/* PC */
+@media (min-width: 1024px){
+
+}
+/* tablet & mobile */
+@media (max-width:1023px){
+    #Content .buy {
+       
+      padding: 16px 24px;
+      
+     }
+     #Content .location_list{
+        padding:15px 16px ;
+   
+     }
+     
+#Content .contact_list {
+    line-height: 2;
+    font-size: 22px;
+}
+#Content .name-box{
+padding : 16px;
+}
+#Content .send{
+    padding :16px 24px;
+}
+#Footer .ti-facebook{
+  font-size: 32px;
+  padding: 8px;
+}
+.ti-instagram{
+    font-size: 32px;
+  padding: 8px;
+}
+.ti-youtube{
+    font-size: 32px;
+    padding: 8px;
+}
+.ti-pinterest{
+    font-size: 32px;
+    padding: 8px;
+}
+.ti-twitter-alt{
+    font-size: 32px;
+    padding: 8px;
+}
+.ti-linkedin{
+    font-size: 32px;
+    padding: 8px;
+}
+.copyright{
+    font-size: 24px;
+
+}
+
+/* tablet */
+@media (min-width:740px) and (max-width:1023px){
+
+}
+/* mobile */
+@media (max-width:740px){
+    #nav > li {
+    display: block;
+    } 
+    #nav >li:first-child{
+        display: inline-block;
+       }
+    #nav {
+       display: block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 2px 48px;
+    }
+    #Header{
+        overflow: hidden;
+    }
+    #Header .search-btn{
+        display: none;
+    }
+    #Header .mobile-menu-btn{
+        position: absolute;/*the con */
+        float: right;/*dồn sang phải*/
+        display: block;
+        top: 0;
+        right: 0;    
+    }
+    
+    #Header .mobile-menu-btn:hover .menu-icon{
+      background-color: #ccc;
+     color:#000;
+
+    }
+    #Header .menu-icon{
+        color: #fff;
+        font-size: 16px;
+        line-height: 46px;
+        padding:  16px;
+    }
+    #Content .col-full{
+        width: 100%;
+    }
+    #Content .name_img{
+        width: 60%;
+        height: 229px;
+    }
+    #contact .box1{
+        display: block;
+        float: none;
+        margin-top: 16px;
+        
+    }
+    #contact .box-name{
+        margin-right: 0;
+        
+    }
+   #contact .send{
+    margin-bottom: 96px;
+   }
+
+}
